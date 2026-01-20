@@ -1,0 +1,335 @@
+import React from 'react';
+import { Award, BookOpen, Briefcase, Building2, Mail, Landmark, Globe, Linkedin, Phone, MessageCircle } from 'lucide-react';
+
+const App = () => {
+  return (
+    <div className="min-h-screen bg-white text-slate-800 font-sans selection:bg-slate-200 relative">
+      {/* Navigation */}
+      <nav className="w-full bg-white border-b border-slate-100 py-6 sticky top-0 z-40">
+        <div className="max-w-5xl mx-auto px-6 flex justify-between items-center">
+          <div>
+            <h1 className="text-xl font-serif font-bold tracking-wide text-slate-900 uppercase">Dr. Rajinikanth</h1>
+            <p className="text-xs text-slate-500 tracking-wider uppercase mt-1">Strategic Advisor</p>
+          </div>
+          <div className="hidden md:flex space-x-8 text-sm font-medium text-slate-600">
+            <a href="#about" className="hover:text-slate-900 transition-colors">About</a>
+            <a href="#honors" className="hover:text-slate-900 transition-colors">Honours</a>
+            <a href="#expertise" className="hover:text-slate-900 transition-colors">Expertise</a>
+            <a href="#muziclly" className="hover:text-slate-900 transition-colors">Muziclly Role</a>
+            <a href="#contact" className="hover:text-slate-900 transition-colors">Contact</a>
+          </div>
+        </div>
+      </nav>
+
+      {/* Hero Section */}
+      <header className="bg-slate-900 text-white py-20 md:py-28">
+        <div className="max-w-5xl mx-auto px-6 md:flex items-center gap-12">
+          
+          {/* UPDATED: Hero Photo with strict styling rules */}
+          <div className="mb-10 md:mb-0 md:w-1/3 flex justify-center md:justify-start">
+             <div className="relative">
+                {/* Thin muted-gold border frame (Semi-round/soft oval) */}
+                <div className="absolute inset-0 rounded-[2.5rem] border border-yellow-600/40 translate-x-2 translate-y-2"></div>
+                {/* Image linked to uploaded filename */}
+                <img 
+                  src="1000324984.jpg"
+                  onError={(e) => {e.target.onerror = null; e.target.src="https://placehold.co/400x500/1e293b/cbd5e1?text=Photo+Pending";}}
+                  alt="Dr. Rajinikanth" 
+                  className="relative z-10 w-64 h-80 md:w-72 md:h-96 object-cover rounded-[2.5rem] border border-slate-700 shadow-2xl bg-slate-800"
+                />
+             </div>
+          </div>
+
+          <div className="flex-1">
+            <div className="inline-block px-3 py-1 border border-slate-600 rounded-full text-xs tracking-widest uppercase mb-6 text-slate-300">
+              Media & Strategic Affairs
+            </div>
+            <h1 className="text-4xl md:text-5xl font-serif font-bold leading-tight mb-4">
+              Strategic Media Advisor &<br />External Affairs Specialist
+            </h1>
+            <p className="text-lg md:text-xl text-slate-300 font-light mb-8 max-w-2xl leading-relaxed">
+              Advisor for strategic alliances, institutional growth, and reputation management across government and corporate sectors.
+            </p>
+            
+            <div className="border-l-2 border-yellow-600 pl-6 space-y-2">
+              <p className="text-sm text-slate-400 uppercase tracking-wide">Current Key Role</p>
+              <p className="font-medium text-lg text-white">
+                Chief Strategic Alliances & Growth Advisor – Muziclly
+              </p>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      {/* Honors Highlight Bar */}
+      <div className="bg-slate-50 border-b border-slate-200 py-8">
+        <div className="max-w-5xl mx-auto px-6 grid md:grid-cols-2 gap-6">
+          <div className="flex items-center gap-4">
+            <Award className="w-8 h-8 text-yellow-700 flex-shrink-0" />
+            <div>
+              <p className="font-serif font-bold text-slate-900">Honorary Doctorate (2025)</p>
+              <p className="text-sm text-slate-600">For contributions to Media & Strategic Communications</p>
+            </div>
+          </div>
+          <div className="flex items-center gap-4">
+            <Award className="w-8 h-8 text-yellow-700 flex-shrink-0" />
+            <div>
+              <p className="font-serif font-bold text-slate-900">Bharat Samman Ratna Award (2025)</p>
+              <p className="text-sm text-slate-600">World Education and Academic Promotion Council</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      {/* About Section */}
+      <section id="about" className="py-20">
+        <div className="max-w-5xl mx-auto px-6">
+          <div className="grid md:grid-cols-12 gap-12">
+            <div className="md:col-span-4">
+              <h2 className="text-2xl font-serif font-bold text-slate-900 mb-6 pb-4 border-b border-slate-200">
+                Profile Overview
+              </h2>
+              <ul className="space-y-4 text-slate-600 text-sm">
+                <li className="flex flex-col">
+                  <span className="font-semibold text-slate-900 uppercase text-xs tracking-wider">Name</span>
+                  <span>Dr. Rajinikanth</span>
+                </li>
+                {/* Age Removed */}
+                <li className="flex flex-col">
+                  <span className="font-semibold text-slate-900 uppercase text-xs tracking-wider">Focus Areas</span>
+                  <span>Media Strategy, Strategic Alliances, External Affairs</span>
+                </li>
+              </ul>
+            </div>
+            <div className="md:col-span-8">
+              <p className="text-lg leading-relaxed text-slate-700 mb-6">
+                With decades of experience navigating the complex intersections of media, government relations, and corporate strategy, Dr. Rajinikanth serves as a senior advisor to institutions seeking sustainable growth and dignified brand positioning.
+              </p>
+              <p className="text-lg leading-relaxed text-slate-700">
+                His professional journey is defined by high-level facilitation and the establishment of robust strategic alliances. He acts as a bridge between media organizations, investors, and regulatory bodies, ensuring compliance, ethical engagement, and long-term value creation.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Honours Detailed Section */}
+      <section id="honors" className="py-20 bg-slate-50">
+        <div className="max-w-5xl mx-auto px-6">
+          <h2 className="text-3xl font-serif font-bold text-slate-900 mb-12 text-center">Honours & Recognition</h2>
+          
+          <div className="grid md:grid-cols-2 gap-8">
+            {/* Honor 1 */}
+            <div className="bg-white p-8 border border-slate-200 shadow-sm">
+              <div className="flex justify-between items-start mb-4">
+                <div className="p-3 bg-slate-100 rounded-full">
+                  <BookOpen className="w-6 h-6 text-slate-700" />
+                </div>
+                <span className="text-sm font-semibold text-slate-400">June 2025</span>
+              </div>
+              <h3 className="text-xl font-bold text-slate-900 mb-2">Honorary Doctorate</h3>
+              <p className="text-slate-600 leading-relaxed">
+                Awarded for significant lifetime contributions to the fields of Media, Strategic Communications, and Public Engagement. This recognition highlights a career dedicated to ethical media practices and institutional growth.
+              </p>
+            </div>
+
+            {/* Honor 2 */}
+            <div className="bg-white p-8 border border-slate-200 shadow-sm">
+              <div className="flex justify-between items-start mb-4">
+                <div className="p-3 bg-slate-100 rounded-full">
+                  <Award className="w-6 h-6 text-slate-700" />
+                </div>
+                <span className="text-sm font-semibold text-slate-400">August 2025</span>
+              </div>
+              <h3 className="text-xl font-bold text-slate-900 mb-2">Bharat Samman Ratna Award</h3>
+              <p className="text-slate-600 leading-relaxed">
+                Conferred by the WEAPC (World Education and Academic Promotion Council) for outstanding services in the media sector, recognizing excellence in bridging the gap between education, media, and strategic development.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Core Expertise */}
+      <section id="expertise" className="py-20">
+        <div className="max-w-5xl mx-auto px-6">
+          <div className="text-center max-w-2xl mx-auto mb-16">
+            <h2 className="text-3xl font-serif font-bold text-slate-900 mb-4">Core Expertise</h2>
+            <p className="text-slate-600">
+              Delivering measured, high-level advisory services for complex organizational challenges.
+            </p>
+          </div>
+
+          <div className="grid md:grid-cols-3 gap-8">
+            {[
+              { title: "Media Strategy & Positioning", icon: <Briefcase className="w-5 h-5" /> },
+              { title: "Advertisement Acquisition", icon: <Building2 className="w-5 h-5" /> },
+              { title: "Investor Relations", icon: <Landmark className="w-5 h-5" /> },
+              { title: "Government Liaison", icon: <Globe className="w-5 h-5" /> },
+              { title: "Reputation Management", icon: <Award className="w-5 h-5" /> },
+              { title: "Deal Facilitation", icon: <Briefcase className="w-5 h-5" /> },
+            ].map((item, idx) => (
+              <div key={idx} className="flex items-start gap-4 p-6 border border-slate-100 hover:border-slate-300 transition-colors">
+                <div className="text-yellow-700 mt-1">{item.icon}</div>
+                <h3 className="font-semibold text-slate-800 text-lg">{item.title}</h3>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Institutional Engagement */}
+      <section className="py-20 bg-slate-900 text-slate-300">
+        <div className="max-w-5xl mx-auto px-6">
+          <div className="border-l-4 border-yellow-600 pl-8">
+            <h2 className="text-3xl font-serif font-bold text-white mb-6">Institutional & Media Engagement</h2>
+            <p className="text-lg mb-8 max-w-3xl leading-relaxed">
+              Dr. Rajinikanth maintains active, high-level advisory relationships within the media and government ecosystems, particularly focusing on the Telangana region.
+            </p>
+          </div>
+          
+          <div className="grid md:grid-cols-2 gap-12 mt-12">
+            <div>
+              <h3 className="text-white font-bold text-xl mb-4">Key Affiliations</h3>
+              <ul className="space-y-4">
+                <li className="flex items-center gap-3">
+                  <div className="w-2 h-2 bg-yellow-600 rounded-full"></div>
+                  <span className="text-white">Active Member – All Media Council</span>
+                </li>
+                <li className="flex items-center gap-3">
+                  <div className="w-2 h-2 bg-slate-600 rounded-full"></div>
+                  <span>Advisor to Media Organizations</span>
+                </li>
+                <li className="flex items-center gap-3">
+                  <div className="w-2 h-2 bg-slate-600 rounded-full"></div>
+                  <span>Facilitator for Corporate Advertisers</span>
+                </li>
+              </ul>
+            </div>
+            <div>
+              <h3 className="text-white font-bold text-xl mb-4">Advisory Scope</h3>
+              <p className="text-sm leading-relaxed opacity-80">
+                All institutional and government interactions are strictly advisory in nature. Engagements are conducted with full adherence to ethical compliance and lawful standards, focusing on promoting institutional growth rather than operational interference.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Muziclly Strategic Role Section */}
+      <section id="muziclly" className="py-24 border-b border-slate-200">
+        <div className="max-w-4xl mx-auto px-6">
+          <div className="bg-white border-2 border-slate-100 p-10 md:p-14 text-center shadow-lg relative overflow-hidden">
+            {/* Decorative Top Bar */}
+            <div className="absolute top-0 left-0 w-full h-2 bg-gradient-to-r from-slate-200 via-slate-400 to-slate-200"></div>
+
+            <div className="mb-8 flex justify-center">
+               <div className="bg-slate-900 text-white px-6 py-3 font-bold text-2xl tracking-tight">
+                 MUZICLLY
+               </div>
+            </div>
+
+            <h2 className="text-2xl md:text-3xl font-serif font-bold text-slate-900 mb-2">Strategic Role with Muziclly</h2>
+            <h3 className="text-yellow-700 font-medium text-lg uppercase tracking-wide mb-8">
+              Chief Strategic Alliances & Growth Advisor
+            </h3>
+
+            <div className="text-left max-w-2xl mx-auto space-y-6 text-slate-700">
+              <p>
+                In his capacity as Chief Strategic Alliances & Growth Advisor, Dr. Rajinikanth leverages his vast network to foster growth for Muziclly through:
+              </p>
+              <ul className="grid md:grid-cols-2 gap-4">
+                <li className="flex items-center gap-2">
+                  <span className="text-yellow-600">▪</span> Strategic Alliances
+                </li>
+                <li className="flex items-center gap-2">
+                  <span className="text-yellow-600">▪</span> Investor Facilitation
+                </li>
+                <li className="flex items-center gap-2">
+                  <span className="text-yellow-600">▪</span> Sponsorship Strategy
+                </li>
+                <li className="flex items-center gap-2">
+                  <span className="text-yellow-600">▪</span> Institutional Outreach
+                </li>
+              </ul>
+              
+              <div className="mt-8 pt-8 border-t border-slate-100">
+                <p className="text-sm text-slate-500 italic bg-slate-50 p-4 rounded text-center">
+                  "Dr. Rajinikanth does not participate in Muziclly’s daily operations, financial control, academic decisions, or internal management. His role is strictly limited to high-level strategic advisory."
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Contact Section */}
+      <section id="contact" className="py-20 bg-slate-50">
+        <div className="max-w-3xl mx-auto px-6 text-center">
+          <h2 className="text-3xl font-serif font-bold text-slate-900 mb-8">Professional Enquiries</h2>
+          <p className="text-slate-600 mb-8">
+            Available for board advisory roles, strategic consultations, and high-level media alliances.
+          </p>
+          
+          {/* UPDATED: Contact Links */}
+          <div className="flex flex-col md:flex-row justify-center items-center gap-4">
+            <a 
+              href="mailto:rajanikanthmuziclly@gmail.com" 
+              className="flex items-center gap-3 bg-white px-8 py-4 border border-slate-200 shadow-sm hover:shadow-md transition-shadow group"
+            >
+              <Mail className="text-slate-900 w-5 h-5" />
+              <span className="text-lg font-medium text-slate-900">rajanikanthmuziclly@gmail.com</span>
+            </a>
+            
+            <a 
+              href="http://www.linkedin.com/in/rajanikanthmattepally" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="flex items-center gap-3 bg-[#0077b5] px-8 py-4 border border-[#0077b5] shadow-sm hover:shadow-md transition-shadow"
+            >
+              <Linkedin className="text-white w-5 h-5" />
+              <span className="text-lg font-medium text-white">LinkedIn Profile</span>
+            </a>
+          </div>
+          <p className="text-xs text-slate-400 mt-6 uppercase tracking-wider">Email or LinkedIn Communication Preferred</p>
+        </div>
+      </section>
+
+      {/* Legal Footer */}
+      <footer className="bg-slate-900 text-slate-500 py-12 border-t border-slate-800">
+        <div className="max-w-5xl mx-auto px-6 text-center">
+          <p className="text-xs md:text-sm leading-relaxed max-w-3xl mx-auto">
+            © {new Date().getFullYear()} Dr. Rajinikanth. All Rights Reserved.
+            <br /><br />
+            <strong>DISCLAIMER:</strong> All roles and engagements mentioned herein are advisory in nature. No representation or commitment is made on behalf of any organization unless formally authorized. Government-related interactions adhere strictly to ethical and legal standards.
+          </p>
+        </div>
+      </footer>
+
+      {/* ADDED: Floating Action Buttons (Fixed Bottom Right) */}
+      <div className="fixed bottom-6 right-6 z-50 flex flex-col gap-3">
+        {/* WhatsApp Button */}
+        <a 
+          href="https://wa.me/919848632920" 
+          target="_blank" 
+          rel="noopener noreferrer" 
+          className="p-3 bg-[#25D366] text-white rounded-full shadow-lg hover:bg-[#20b85c] transition-colors flex items-center justify-center border border-[#20b85c]"
+          title="WhatsApp"
+        >
+          <MessageCircle className="w-6 h-6" />
+        </a>
+        {/* Phone Button */}
+        <a 
+          href="tel:+919848632920" 
+          className="p-3 bg-slate-800 text-white rounded-full shadow-lg hover:bg-slate-700 transition-colors flex items-center justify-center border border-slate-700"
+          title="Call"
+        >
+          <Phone className="w-6 h-6" />
+        </a>
+      </div>
+
+    </div>
+  );
+};
+
+export default App;
